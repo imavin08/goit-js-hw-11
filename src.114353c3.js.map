@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":["name","params"],"mappings":";;;AACwB,aAAxB,SAASA,EAAKC,IADd,QAAA","file":"src.114353c3.js","sourceRoot":"../src","sourcesContent":["import './css/styles.css';\nfunction name(params) {}\n"]}
