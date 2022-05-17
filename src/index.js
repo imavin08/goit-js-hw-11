@@ -47,7 +47,8 @@ function onSubmit(e) {
 
 function onLoadMore() {
   getPixabayApi.fetchApi().then(hits => {
-    if (hits.length === 0) {
+    console.log(hits);
+    if (hits.length < 40) {
       Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
       refs.loadMoreBtn.classList.add('load-more__js');
     }
@@ -92,13 +93,3 @@ function createSimpleLightbox() {
 function clearGallery() {
   refs.gallery.innerHTML = '';
 }
-
-function scroll() {
-  return new InfiniteScroll(gallery, {
-    path: '.pagination__next',
-    append: '.post',
-    history: false,
-  });
-}
-
-scroll();
